@@ -1,0 +1,122 @@
+
+.lux-auth-section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0b1112; 
+  padding: 40px;
+}
+
+.lux-auth-card {
+  background: #0f1618; 
+  border: 1px solid rgba(212, 175, 55, 0.2); 
+  padding: 50px 40px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+
+.lux-auth-header .lux-catalog-title {
+  font-size: 28px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.lux-auth-header .lux-catalog-subtitle {
+  color: #d4af37;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+
+.lux-input-group {
+  text-align: left;
+  margin-bottom: 25px;
+}
+
+.lux-input-group label {
+  display: block;
+  color: #fff;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  opacity: 0.8;
+}
+
+.lux-input {
+  width: 100%;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid #d4af37; 
+  padding: 12px 0;
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.lux-input:focus {
+  border-bottom: 1px solid #fff;
+}
+
+
+.lux-password-box {
+  position: relative;
+  display: flex;
+}
+
+.lux-show-pass {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #d4af37;
+  font-size: 12px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+
+.lux-auth-btn {
+  width: 100%;
+  background: #d4af37;
+  color: #0b1112;
+  border: none;
+  padding: 15px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+.lux-auth-btn:hover {
+  background: #fff;
+  transform: translateY(-2px);
+}
+
+
+.lux-auth-footer {
+  margin-top: 30px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.lux-link-btn {
+  background: none;
+  border: none;
+  color: #d4af37;
+  margin-left: 8px;
+  cursor: pointer;
+  text-decoration: underline;
+}
