@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./about.css";
+import "./About.css";
 
 export default function About() {
   const brands = [
