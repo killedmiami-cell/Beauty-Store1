@@ -12,10 +12,12 @@ import Register from "./pages/Register";
 import Profile from "./pages/Profile";
 import AdminDashboard from "./pages/Admin/AdminDashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
-
+import Treatment from "./pages/Treatment";
+import Checkout from "./pages/Checkout";
 function App() {
   return (
     <>
+    
      <Header/>
     <Routes>
       <Route path="/" element={<Home />} />
@@ -28,9 +30,9 @@ function App() {
       <Route path="/Header" element={<Header />} />
       <Route path="/register" element={<Register />} />
       <Route path="/profile" element={<Profile />} />
+      <Route path="/treatment" element={<Treatment />} />
+      <Route path="/checkout" element={<Checkout />} />
 
-
-      
       <Route element={<ProtectedRoute />}>
         <Route path="/admin" element={<AdminDashboard />} />
         <Route path="/product/:id" element={<ProductPage />} />

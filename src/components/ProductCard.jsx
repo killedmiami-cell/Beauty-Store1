@@ -29,7 +29,9 @@ export default function ProductCard({ product, liked }) {
       <img src={product.image} alt={product.name} />
       <div className="lux-card-info">
         <h3>{product.name}</h3>
-        <span>{product.price}</span>
+        {/* <span>{product.price}</span> */}
+        <span>${product.price.toLocaleString()}</span>
+
         <button className="like-btn" onClick={handleLikeClick}>
           {liked ? "❤️" : "🤍"}
         </button>

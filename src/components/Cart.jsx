@@ -18,7 +18,7 @@ export default function Cart() {
       {items.map((item) => (
         <div key={item.id} className="cart-item">
           <h3>{item.name}</h3>
-          <p>${item.price}</p>
+          <p>сом{item.price}</p>
 
           <div className="qty">
             <button onClick={() => dispatch(decreaseQty(item.id))}>➖</button>
@@ -32,7 +32,9 @@ export default function Cart() {
         </div>
       ))}
 
-      <h2>Total: ${total}</h2>
+      {/* <h2>Total: ${total}</h2> */}
+      <h2>Итого: {total.toLocaleString()} сом</h2>
+
 
       <button
         onClick={() => {

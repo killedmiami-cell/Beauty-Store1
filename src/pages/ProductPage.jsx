@@ -6,7 +6,7 @@ const products = [
   {
     id: 1,
     name: "Luxe Serum",
-    price: "$120",
+    price: "1201с",
     image:
       "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519",
     description:
@@ -15,7 +15,7 @@ const products = [
   {
     id: 2,
     name: "Velvet Cream",
-    price: "$95",
+    price: "9100с",
     image:
       "https://images.unsplash.com/photo-1596755389378-c31d21fd1273",
     description:

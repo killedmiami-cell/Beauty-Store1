@@ -46,7 +46,9 @@ export default function MiniCart({ open, onClose }) {
       ))}
 
       <div className="mini-cart-footer">
-        <strong>Total: {total}</strong>
+        {/* <strong>Total: {total}</strong> */}
+        <strong>Total: ${total.toLocaleString()}</strong>
+
       </div>
     </div>
   );

@@ -8,6 +8,7 @@ export default function BurgerMenu({ close }) {
       <Link to="/skincare" onClick={close}>Skin Care</Link>
       <Link to="/about" onClick={close}>About</Link>
       <Link to="/contacts" onClick={close}>Contacts</Link>
+      <Link to="/treatment" onClick={close}>Treatment</Link>
     </div>
   );
 }

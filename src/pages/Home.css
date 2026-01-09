@@ -187,36 +187,17 @@
   overflow: hidden;
 }
 
-
-.lux-footer {
-  padding: 60px 40px;
-  text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  font-size: 12px;
-  letter-spacing: 1px;
-}
-
-.footer-country {
-  margin-bottom: 15px;
-  text-transform: uppercase;
-}
-
-.gold-text {
-  color: #d4af37;
-  font-weight: bold;
-}
-
-.footer-copyright {
-  opacity: 0.4;
+.lux-section .history-section {
+  width: 300px;  
+  height: 200px; 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 20px; 
 }
 
 
-@media (max-width: 1000px) {
-  .brands-grid { grid-template-columns: repeat(2, 1fr); }
-  .history-wrapper { text-align: center; margin: 0 auto; }
-}
 
-@media (max-width: 600px) {
-  .brands-grid { grid-template-columns: 1fr; }
-}
+
+
 

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./Home.css";
 import background from "../images/background.jpg"
-
+import lux1 from "../images/lux1.png"
  export default function Home() {
   const brands = [
     { name: "Dior", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8cGnvHgFJ_Cg5PIfY9DuvGCIf6i9XBzhpmA&s" },
@@ -27,7 +27,7 @@ import background from "../images/background.jpg"
 </section>
 
       
-      <section className="lux-section history-section">
+      <section className="lux-section history-section"  style={{lux1Image: `url(${lux1})`}}>
         <div className="lux-container">
           <div className="history-wrapper">
             <h2 className="lux-catalog-title">История красоты</h2>

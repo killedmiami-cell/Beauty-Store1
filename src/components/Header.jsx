@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 import MiniCart from "./MiniCart";
-
+import "./Header.css"
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [openCart, setOpenCart] = useState(false);
@@ -23,16 +23,19 @@ export default function Header() {
           <NavLink to="/about" onClick={closeMenu}>О нас</NavLink>
           <NavLink to="/skincare" onClick={closeMenu}>Уход за кожей</NavLink>
           <NavLink to="/catalog" onClick={closeMenu}>Каталог</NavLink>
+          <NavLink to="/treatment" onClick={closeMenu}>Лечение</NavLink>
+          <Link to="/checkout">Оформить заказ</Link>
           <NavLink to="/profile" onClick={closeMenu}>Личный кабинет</NavLink>
           <NavLink to="/contacts" onClick={closeMenu}>Контакты</NavLink>
         </nav>
 
-        {/* ИКОНКА КОРЗИНЫ */}
+        
         <button className="cart-btn" onClick={() => setOpenCart(true)}>
           🛒
-          {items.length > 0 && (
+          {/* {items.length > 0 && (
             <span className="cart-count">{items.length}</span>
-          )}
+          )} */}    {items.length > 0 && <span>{items.length}</span>}
+
         </button>
 
         <div className="burger" onClick={() => setOpen(!open)}>
@@ -45,12 +48,15 @@ export default function Header() {
             <NavLink to="/about" onClick={closeMenu}>О нас</NavLink>
             <NavLink to="/skincare" onClick={closeMenu}>Уход за кожей</NavLink>
             <NavLink to="/catalog" onClick={closeMenu}>Каталог</NavLink>
+            <NavLink to="/treatment" onClick={closeMenu}>Лечение</NavLink>
             <NavLink to="/contacts" onClick={closeMenu}>Контакты</NavLink>
+            <Link to="/checkout">Оформить заказ</Link>
+
           </nav>
         )}
       </header>
 
-      {/* MINI CART */}
+      
       <MiniCart open={openCart} onClose={() => setOpenCart(false)} />
     </>
   );
