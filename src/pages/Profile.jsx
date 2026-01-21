@@ -1,38 +1,65 @@
-import React from 'react';
-import './Profile.css';
-
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import './Profile.css'
 const Profile = () => {
+  const [showPassword, setShowPassword] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    
+    if (email && password.length >= 6) {
+      navigate("/profile");
+    }
+  };
+
   return (
-    <section className="lux-auth-section">
-      <div className="lux-auth-card">
-        <div className="lux-auth-header">
-          <h2 className="lux-catalog-title">Вход в кабинет</h2>
-          <p className="lux-catalog-subtitle">Добро пожаловать в мир Luxe Cosmetics</p>
+    <div className="login-wrapper">
+      <form className="login-card" onSubmit={handleSubmit}>
+        <div className="login-icon">
+          👤
         </div>
 
-        <form className="lux-form">
-          <div className="lux-input-group">
-            <label>Ваш Email</label>
-            <input type="email" placeholder="example@mail.com" className="lux-input" />
-          </div>
+        <h2>Вход</h2>
+        <p className="subtitle">Войдите в свой аккаунт</p>
 
-          <div className="lux-input-group">
-            <label>Пароль</label>
-            <div className="lux-password-box">
-              <input type="password" placeholder="••••••••" className="lux-input" />
-              <button type="button" className="lux-show-pass">Показать</button>
-            </div>
-          </div>
+        <label>Email</label>
+        <input
+          type="email"
+          placeholder="example@email.com"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
 
-          <button type="submit" className="lux-auth-btn">Войти в аккаунт</button>
-        </form>
-
-        <div className="lux-auth-footer">
-          <span>Впервые у нас?</span>
-          <button className="lux-link-btn">Создать профиль</button>
+        <label>Пароль</label>
+        <div className="password-field">
+          <input
+            type={showPassword ? "text" : "password"}
+            placeholder="••••••••"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <span onClick={() => setShowPassword(!showPassword)}>
+            {showPassword ? "Скрыть" : "Показать"}
+          </span>
         </div>
-      </div>
-    </section>
+
+        <small>
+          Минимум 6 символов. Лучше используйте буквы и цифры.
+        </small>
+
+        <button type="submit">Войти</button>
+
+        <p className="register-link">
+          Нет аккаунта? <Link to="/register">Зарегистрироваться</Link>
+        </p>
+      </form>
+    </div>
   );
 };
 

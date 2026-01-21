@@ -29,3 +29,55 @@ const authSlice = createSlice({
 
 export const { login, logout } = authSlice.actions;
 export default authSlice.reducer;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import { createSlice } from "@reduxjs/toolkit";
+
+// const authSlice = createSlice({
+//   name: "auth",
+//   initialState: {
+//     isAdmin: localStorage.getItem("admin") === "true",
+//   },
+//   reducers: {
+//     login(state, action) {
+//       const { login, password } = action.payload;
+//       if (login === "admin" && password === "12345") {
+//         state.isAdmin = true;
+//         localStorage.setItem("admin", "true");
+//       } else {
+//         alert("Неверный логин или пароль");
+//       }
+//     },
+//     logout(state) {
+//       state.isAdmin = false;
+//       localStorage.removeItem("admin");
+//     },
+//   },
+// });
+
+// export const { login, logout } = authSlice.actions;
+// export default authSlice.reducer;
+
+
+
+
+
+
+
+
+
+
+
+

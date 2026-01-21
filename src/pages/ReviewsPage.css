@@ -1,0 +1,151 @@
+.reviews-page {
+  padding: 80px 6%;
+  background: radial-gradient(
+    circle at top,
+    #0e1a1a,
+    #070b0c 60%
+  );
+  min-height: 100vh;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+}
+
+
+.reviews-page h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 50px;
+  color: #d4af37;
+  letter-spacing: 2px;
+}
+
+
+.review-form {
+  max-width: 700px;
+  margin: 0 auto 70px;
+  background: rgba(255,255,255,0.03);
+  padding: 40px;
+  border-radius: 18px;
+  box-shadow: 0 0 40px rgba(212,175,55,0.08);
+}
+
+.review-form input,
+.review-form textarea {
+  width: 100%;
+  background: #0b1112;
+  border: 1px solid rgba(212,175,55,0.2);
+  padding: 14px 16px;
+  margin-bottom: 18px;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 15px;
+}
+
+.review-form input:focus,
+.review-form textarea:focus {
+  outline: none;
+  border-color: #d4af37;
+  box-shadow: 0 0 10px rgba(212,175,55,0.3);
+}
+
+
+.rating {
+  margin-bottom: 20px;
+}
+
+.star {
+  font-size: 30px; 
+  cursor: pointer;
+  color: #444;
+  transition: 0.3s;
+}
+
+.star:hover,
+.star.filled {
+  color: #d4af37;
+  text-shadow:
+    0 0 6px rgba(212,175,55,0.8),
+    0 0 15px rgba(120,255,220,0.4); 
+}
+
+
+.review-form button {
+  width: 100%;
+  background: linear-gradient(135deg, #d4af37, #9c7c19);
+  border: none;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 14px;
+  cursor: pointer;
+  color: #0b1112;
+  transition: 0.3s;
+}
+
+.review-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(212,175,55,0.4);
+}
+
+
+.reviews-list {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.review-item {
+  background: rgba(255,255,255,0.03);
+  border-radius: 20px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.4);
+}
+
+
+.review-header {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 14px;
+}
+
+.avatar {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 2px solid #d4af37;
+}
+
+.email,
+.date {
+  font-size: 13px;
+  color: #aaa;
+}
+
+
+.stars .star {
+  font-size: 20px;
+  cursor: default;
+}
+
+
+.comment {
+  margin-top: 10px;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+
+.replies {
+  margin-top: 20px;
+  padding-left: 20px;
+  border-left: 2px solid rgba(212,175,55,0.3);
+}
+
+.reply {
+  margin-bottom: 12px;
+}
+
+.reply-date {
+  font-size: 12px;
+  color: #999;
+}

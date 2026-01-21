@@ -13,12 +13,16 @@ import Profile from "./pages/Profile";
 import AdminDashboard from "./pages/Admin/AdminDashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Treatment from "./pages/Treatment";
-import Checkout from "./pages/Checkout";
+import Checkout from "./pages/Register";
+import ReviewsPage from "./pages/ReviewsPage";
+import FavoritesPage from "./pages/FavoritesPage";
+
 function App() {
   return (
     <>
-    
+     
      <Header/>
+     
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
@@ -32,6 +36,9 @@ function App() {
       <Route path="/profile" element={<Profile />} />
       <Route path="/treatment" element={<Treatment />} />
       <Route path="/checkout" element={<Checkout />} />
+      <Route path="/reviews" element={<ReviewsPage />} />
+      <Route path="/favorites" element={<FavoritesPage />} />
+      
 
       <Route element={<ProtectedRoute />}>
         <Route path="/admin" element={<AdminDashboard />} />

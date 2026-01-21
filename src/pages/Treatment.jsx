@@ -1,10 +1,12 @@
 import "./Treatment.css";
-
+import lux2 from "../images/lux2.jpg"
 export default function Treatment() {
   return (
     <>
       <section className="treatment-page">
-        <div className="treatment-hero">
+        <div className="treatment-hero" 
+        style={{ backgroundImage: `url(${lux2})` }}>
+
           <h1>Лечение кожи</h1>
           <p>
             Профессиональный уход и эффективные решения для здоровья вашей кожи
@@ -88,4 +90,3 @@ export default function Treatment() {
     </>
   );
 }
-

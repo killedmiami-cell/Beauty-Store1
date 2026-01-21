@@ -1,0 +1,114 @@
+.favorites-page {
+  min-height: calc(100vh - 80px);
+  margin-top: 80px;
+  padding: 60px 6%;
+  background: radial-gradient(
+    circle at top,
+    #0e1a1a,
+    #070b0c 65%
+  );
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+}
+
+
+.favorites-page h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 50px;
+  color: #d4af37;
+  letter-spacing: 2px;
+}
+
+
+.favorites-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 35px;
+}
+
+
+.favorite-card {
+  position: relative;
+  background: rgba(255,255,255,0.03);
+  border-radius: 22px;
+  padding: 22px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.4s ease;
+  box-shadow: 0 0 30px rgba(0,0,0,0.4);
+}
+
+.favorite-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+
+.favorite-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 16px;
+  margin-bottom: 15px;
+}
+
+
+.favorite-card h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+
+.favorite-card span {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  color: #d4af37;
+}
+
+
+.like-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(0,0,0,0.6);
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.like-btn:hover {
+  transform: scale(1.1);
+}
+
+.like-btn.active {
+  background: rgba(212,175,55,0.15);
+  box-shadow: 0 0 12px rgba(212,175,55,0.5);
+}
+
+
+.favorites-page p {
+  text-align: center;
+  font-size: 18px;
+  color: #aaa;
+}
+
+
+@media (max-width: 600px) {
+  .favorites-page h2 {
+    font-size: 28px;
+  }
+
+  .favorite-card img {
+    height: 170px;
+  }
+}

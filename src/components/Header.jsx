@@ -24,7 +24,9 @@ export default function Header() {
           <NavLink to="/skincare" onClick={closeMenu}>Уход за кожей</NavLink>
           <NavLink to="/catalog" onClick={closeMenu}>Каталог</NavLink>
           <NavLink to="/treatment" onClick={closeMenu}>Лечение</NavLink>
-          <Link to="/checkout">Оформить заказ</Link>
+          <NavLink to="/favorites" onClick={closeMenu}>Избранное</NavLink>
+          <NavLink to="/reviews" onClick={closeMenu}>Отзывы</NavLink>
+          <Link to="/register">Регистрация</Link>
           <NavLink to="/profile" onClick={closeMenu}>Личный кабинет</NavLink>
           <NavLink to="/contacts" onClick={closeMenu}>Контакты</NavLink>
         </nav>
@@ -49,8 +51,9 @@ export default function Header() {
             <NavLink to="/skincare" onClick={closeMenu}>Уход за кожей</NavLink>
             <NavLink to="/catalog" onClick={closeMenu}>Каталог</NavLink>
             <NavLink to="/treatment" onClick={closeMenu}>Лечение</NavLink>
+            <NavLink to="/reviews" onClick={closeMenu}>Отзывы</NavLink>
             <NavLink to="/contacts" onClick={closeMenu}>Контакты</NavLink>
-            <Link to="/checkout">Оформить заказ</Link>
+            <Link to="/checkout">Регистрация</Link>
 
           </nav>
         )}

@@ -1,15 +1,13 @@
 import { useSelector } from "react-redux";
 import { Navigate, Outlet } from "react-router-dom";
 
-export default function ProtectedRoute() {
-  const { isAuth, isAdmin } = useSelector((state) => state.auth);
+const ProtectedRoute = () => {
+  const isAdmin = useSelector(s => s.auth.isAdmin);
+  return isAdmin ? <Outlet /> : <Navigate to="/admin-login" />;
+};
 
-  if (!isAuth || !isAdmin) {
-    return <Navigate to="/login" replace />;
-  }
+export default ProtectedRoute;
 
-  return <Outlet />;
-}
 
 
 

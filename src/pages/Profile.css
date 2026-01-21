@@ -1,122 +1,73 @@
-
-.lux-auth-section {
-  min-height: 100vh;
+.login-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #0b1112; 
-  padding: 40px;
+  min-height: 100vh;
+  background: #0a0a0a;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.lux-auth-card {
-  background: #0f1618; 
-  border: 1px solid rgba(212, 175, 55, 0.2); 
-  padding: 50px 40px;
+.login-card {
+  background: rgba(20, 20, 20, 0.9);
+  padding: 100px 50px; /* увеличен padding для высоты */
   border-radius: 20px;
+  box-shadow: 0 0 60px 10px rgba(194, 158, 38, 0.5);
+  max-width: 580px; /* увеличена ширина */
   width: 100%;
-  max-width: 400px;
-  text-align: center;
-}
-
-
-.lux-auth-header .lux-catalog-title {
-  font-size: 28px;
+  box-sizing: border-box;
   color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 10px;
 }
 
-.lux-auth-header .lux-catalog-subtitle {
-  color: #d4af37;
-  font-size: 14px;
+
+h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2rem;
   margin-bottom: 30px;
 }
 
-
-.lux-input-group {
-  text-align: left;
-  margin-bottom: 25px;
-}
-
-.lux-input-group label {
-  display: block;
-  color: #fff;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 8px;
-  opacity: 0.8;
-}
-
-.lux-input {
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
   width: 100%;
+  padding: 14px 18px;
+  margin-bottom: 20px;
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-bottom: 1px solid #d4af37; 
-  padding: 12px 0;
-  color: #fff;
+  border: 1.5px solid #c29e26;
+  border-radius: 12px;
   font-size: 16px;
+  color: #fff;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+input::placeholder {
+  color: #c29e26cc;
+}
+
+input:focus {
   outline: none;
-  transition: 0.3s;
+  border-color: #f4d35e;
+  box-shadow: 0 0 10px #f4d35e;
 }
 
-.lux-input:focus {
-  border-bottom: 1px solid #fff;
-}
-
-
-.lux-password-box {
-  position: relative;
-  display: flex;
-}
-
-.lux-show-pass {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  color: #d4af37;
-  font-size: 12px;
-  cursor: pointer;
-  text-transform: uppercase;
-}
-
-
-.lux-auth-btn {
+button[type="submit"] {
   width: 100%;
-  background: #d4af37;
-  color: #0b1112;
+  padding: 16px 0;
+  background: linear-gradient(90deg, #b49121, #e3bc4d);
   border: none;
-  padding: 15px;
-  border-radius: 30px;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  border-radius: 15px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #1a1a1a;
   cursor: pointer;
-  transition: 0.3s;
-  margin-top: 10px;
+  transition: background 0.3s ease;
+  box-shadow: 0 0 12px #c29e26;
 }
 
-.lux-auth-btn:hover {
-  background: #fff;
-  transform: translateY(-2px);
+button[type="submit"]:hover {
+  background: linear-gradient(90deg, #e3bc4d, #b49121);
+  box-shadow: 0 0 20px #f4d35e;
 }
 
-
-.lux-auth-footer {
-  margin-top: 30px;
-  font-size: 13px;
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.lux-link-btn {
-  background: none;
-  border: none;
-  color: #d4af37;
-  margin-left: 8px;
-  cursor: pointer;
-  text-decoration: underline;
-}

@@ -34,7 +34,7 @@ export default function Contacts() {
           </div>
         </div>
 
-        {/* FORM */}
+        
         <form className="contacts-form">
           <h2>Напишите нам</h2>
 
