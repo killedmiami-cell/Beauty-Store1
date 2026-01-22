@@ -1,73 +1,145 @@
+/* ===== PAGE CENTER ===== */
 .login-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
-  background: #0a0a0a;
+  display: flex;
+  align-items: center;      /* вертикальный центр */
+  justify-content: center;  /* горизонтальный центр */
+  background: radial-gradient(
+    circle at top,
+    #0f1c1c,
+    #070b0c 70%
+  );
   padding: 20px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* ===== CARD ===== */
 .login-card {
-  background: rgba(20, 20, 20, 0.9);
-  padding: 100px 50px; /* увеличен padding для высоты */
-  border-radius: 20px;
-  box-shadow: 0 0 60px 10px rgba(194, 158, 38, 0.5);
-  max-width: 580px; /* увеличена ширина */
   width: 100%;
-  box-sizing: border-box;
+  max-width: 420px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 26px;
+  padding: 40px 35px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
   color: #fff;
+  display: flex;
+  flex-direction: column;
 }
 
+/* ===== ICON ===== */
+.login-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: rgba(212, 175, 55, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+}
 
-h2 {
+/* ===== TITLE ===== */
+.login-card h2 {
   text-align: center;
-  font-weight: 700;
-  font-size: 2rem;
-  margin-bottom: 30px;
+  font-size: 28px;
+  margin-bottom: 6px;
+  color: #d4af37;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"] {
+.subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 25px;
+}
+
+/* ===== LABEL ===== */
+.login-card label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #ddd;
+}
+
+/* ===== INPUT ===== */
+.login-card input {
   width: 100%;
-  padding: 14px 18px;
-  margin-bottom: 20px;
-  background: transparent;
-  border: 1.5px solid #c29e26;
-  border-radius: 12px;
-  font-size: 16px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(0,0,0,0.4);
   color: #fff;
-  box-sizing: border-box;
-  transition: border-color 0.3s;
-}
-
-input::placeholder {
-  color: #c29e26cc;
-}
-
-input:focus {
+  font-size: 14px;
   outline: none;
-  border-color: #f4d35e;
-  box-shadow: 0 0 10px #f4d35e;
+  margin-bottom: 16px;
 }
 
-button[type="submit"] {
-  width: 100%;
-  padding: 16px 0;
-  background: linear-gradient(90deg, #b49121, #e3bc4d);
-  border: none;
-  border-radius: 15px;
-  font-weight: 700;
-  font-size: 18px;
-  color: #1a1a1a;
+.login-card input:focus {
+  border-color: #d4af37;
+  box-shadow: 0 0 0 2px rgba(212,175,55,0.2);
+}
+
+/* ===== PASSWORD FIELD ===== */
+.password-field {
+  position: relative;
+}
+
+.password-field span {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: #d4af37;
   cursor: pointer;
-  transition: background 0.3s ease;
-  box-shadow: 0 0 12px #c29e26;
 }
 
-button[type="submit"]:hover {
-  background: linear-gradient(90deg, #e3bc4d, #b49121);
-  box-shadow: 0 0 20px #f4d35e;
+/* ===== SMALL TEXT ===== */
+.login-card small {
+  font-size: 12px;
+  color: #aaa;
+  margin-bottom: 22px;
 }
+
+/* ===== BUTTON ===== */
+.login-card button {
+  padding: 14px;
+  border-radius: 16px;
+  border: none;
+  background: linear-gradient(135deg, #d4af37, #b8962e);
+  color: #000;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.login-card button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(212,175,55,0.5);
+}
+
+/* ===== REGISTER LINK ===== */
+.register-link {
+  text-align: center;
+  margin-top: 22px;
+  font-size: 14px;
+}
+
+.register-link a {
+  color: #d4af37;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 480px) {
+  .login-card {
+    padding: 30px 24px;
+  }
+}
+
 
